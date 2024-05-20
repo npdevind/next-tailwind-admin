@@ -1,7 +1,17 @@
 import { Inter } from "next/font/google";
-import "./globals.css";
+import "../style/globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+// const inter = Inter({ subsets: ["latin"] });
+import { Inter as FontSans } from "next/font/google";
+
+import { cn } from "@/lib/utils";
+
+const fontSans = FontSans({
+  subsets: ["latin"],
+  variable: "--font-sans",
+});
+
+import { ThemeProvider } from "@/components/theme-provider";
 
 export const metadata = {
   title: "Create Next App",
@@ -10,8 +20,22 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="en" suppressHydrationWarning>
+      <body
+        className={cn(
+          "min-h-screen bg-background font-sans antialiased",
+          fontSans.variable
+        )}
+      >
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
+      </body>
     </html>
   );
 }
