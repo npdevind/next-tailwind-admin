@@ -19,6 +19,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import {
+  Bell,
   CircleUser,
   Home,
   LineChart,
@@ -32,7 +33,9 @@ import {
   Users,
 } from "lucide-react";
 import { useTheme } from "next-themes";
+import Image from "next/image";
 import Link from "next/link";
+import userLogo from "../../../assets/user.png";
 
 export default function Header() {
   const { setTheme } = useTheme();
@@ -128,9 +131,22 @@ export default function Header() {
             </div>
           </form>
         </div>
+        <Button
+          variant="outline"
+          size="icon"
+          className="ml-auto h-8 w-8 border-0 bg-transparent hover:bg-transparent hover:border-0"
+        >
+          <Bell className="h-4 w-4" />
+          <span className="sr-only">Toggle notifications</span>
+        </Button>
+
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
-            <Button variant="outline" size="icon">
+            <Button
+              variant="outline"
+              size="icon"
+              className="border-0 bg-transparent hover:border-0 hover:bg-transparent"
+            >
               <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
               <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
               <span className="sr-only">Toggle theme</span>
@@ -152,7 +168,15 @@ export default function Header() {
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <Button variant="secondary" size="icon" className="rounded-full">
-              <CircleUser className="h-5 w-5" />
+              {/* <CircleUser className="h-5 w-5" /> */}
+              <Image
+                src={userLogo}
+                alt="Image"
+                // width="1920"
+                // height="1080"
+                className="h-9 w-9 rounded-full"
+              />
+
               <span className="sr-only">Toggle user menu</span>
             </Button>
           </DropdownMenuTrigger>

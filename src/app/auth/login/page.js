@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import Image from "next/image";
 import Link from "next/link";
-import loginJpg from "../../../assets/login.png";
+import loginJpg from "../../../assets/login_new.jpg";
 
 export default function Login() {
   return (
@@ -61,7 +61,7 @@ export default function Login() {
             alt="Image"
             // width="1920"
             // height="1080"
-            className="h-full w-full object-cover dark:brightness-[0.2] dark:grayscale"
+            className="h-dvh w-full object-cover dark:brightness-[0.2] dark:grayscale"
           />
         </div>
       </div>
