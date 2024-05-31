@@ -20,7 +20,7 @@ import { Input } from "@/components/ui/input";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import {
   Bell,
-  CircleUser,
+  Grip,
   Home,
   LineChart,
   Menu,
@@ -36,12 +36,13 @@ import { useTheme } from "next-themes";
 import Image from "next/image";
 import Link from "next/link";
 import userLogo from "../../../assets/user.png";
+import { Avatar, AvatarFallback, AvatarImage } from "@/app/ui/avatar";
 
 export default function Header() {
   const { setTheme } = useTheme();
   return (
     <>
-      <header className="flex h-14 items-center gap-4 border-b bg-muted/40 px-4 lg:h-[60px] lg:px-6">
+      <header className="flex h-14 items-center gap-1 border-b bg-muted/40 px-4 lg:h-[60px] lg:px-6">
         <Sheet>
           <SheetTrigger asChild>
             <Button
@@ -162,6 +163,49 @@ export default function Header() {
             <DropdownMenuItem onClick={() => setTheme("system")}>
               System
             </DropdownMenuItem>
+          </DropdownMenuContent>
+        </DropdownMenu>
+
+        <DropdownMenu>
+          <DropdownMenuTrigger asChild>
+            <Button
+              variant="outline"
+              size="icon"
+              className="border-0 bg-transparent hover:border-0 hover:bg-transparent"
+            >
+              <Grip className="h-4 w-4" />
+            </Button>
+          </DropdownMenuTrigger>
+          <DropdownMenuContent align="end" className="p-3">
+            <div class="grid grid-cols-3 gap-4">
+              <div class="...">
+                <Avatar>
+                  <AvatarImage
+                    src="https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png"
+                    alt="@shadcn"
+                  />
+                  <AvatarFallback>CN</AvatarFallback>
+                </Avatar>
+              </div>
+              <div class="...">
+                <Avatar>
+                  <AvatarImage
+                    src="https://i.pinimg.com/originals/8e/72/f7/8e72f7331b652b842b0c271ab144d332.png"
+                    alt="@shadcn"
+                  />
+                  <AvatarFallback>CN</AvatarFallback>
+                </Avatar>
+              </div>
+              <div class="...">
+                <Avatar>
+                  <AvatarImage
+                    src="https://github.com/shadcn.png"
+                    alt="@shadcn"
+                  />
+                  <AvatarFallback>CN</AvatarFallback>
+                </Avatar>
+              </div>
+            </div>
           </DropdownMenuContent>
         </DropdownMenu>
 
