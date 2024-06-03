@@ -53,6 +53,14 @@ module.exports = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        "primary-color": "var(--primary-color)",
+        "secondary-color": "var(--secondary-color)",
+        "info-color": "var(--info-color)",
+        "success-color": "var(--success-color)",
+        "danger-color": "var(--danger-color)",
+        "warning-color": "var(--warning-color)",
+        "light-color": "var(--light-color)",
+        "dark-color": "var(--dark-color)",
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -76,6 +84,9 @@ module.exports = {
       fontFamily: {
         sans: ["var(--font-sans)", ...fontFamily.sans],
       },
+      // backgroundImage: {
+      //   "login-bg": "url('/assets/login.svg')",
+      // },
     },
   },
   plugins: [require("tailwindcss-animate")],

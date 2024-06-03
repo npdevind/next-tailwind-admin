@@ -8,6 +8,9 @@ import {
   ChevronDown,
   ChevronUp,
   Siren,
+  FileLock2,
+  Badge,
+  Box,
 } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -34,6 +37,21 @@ const arrayCommonItem = [
         icon: <Siren className="h-4 w-4" />,
         link: "/interface/alerts",
       },
+      {
+        item: "Accordion",
+        icon: <ChevronDown className="h-4 w-4" />,
+        link: "/interface/accordion",
+      },
+      {
+        item: "Badges",
+        icon: <Badge className="h-4 w-4" />,
+        link: "/interface/badges",
+      },
+      {
+        item: "Buttons",
+        icon: <Box className="h-4 w-4" />,
+        link: "/interface/buttons",
+      },
     ],
   },
 ];
@@ -48,6 +66,11 @@ const arrayAuthItem = [
     item: "Sign Up",
     icon: <LogIn className="h-4 w-4" />,
     link: "/auth/signup",
+  },
+  {
+    item: "Forgot Password",
+    icon: <FileLock2 className="h-4 w-4" />,
+    link: "/auth/forgot-password",
   },
 ];
 
@@ -93,7 +116,7 @@ export default function Sidebar() {
                 )}
               </Link>
               {item.subMenu && openSubMenus[index] && (
-                <div className="pl-6">
+                <div className="pl-6 mb-2">
                   {item.subMenu.map((subItem, subIndex) => (
                     <Link
                       key={subIndex}
@@ -101,7 +124,7 @@ export default function Sidebar() {
                       className={
                         pathName === subItem.link
                           ? "flex items-center gap-3 rounded-lg px-3 py-2 transition-all hover:text-primary bg-muted"
-                          : "flex items-center gap-3 rounded-lg px-3 py-2 transition-all hover:text-primary text-muted-foreground"
+                          : "flex items-center gap-3 rounded-lg px-3 py-2 transition-all hover:text-primary text-muted-foreground "
                       }
                     >
                       {subItem.icon} {subItem.item}

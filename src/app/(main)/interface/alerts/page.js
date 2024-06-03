@@ -1,5 +1,4 @@
 import { Alert, AlertDescription, AlertTitle } from "@/app/ui/alert";
-import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
@@ -9,7 +8,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 
-import { CheckCheck, ShieldAlert, Terminal } from "lucide-react";
+import { Info, ShieldAlert, Terminal } from "lucide-react";
 
 export default function alertInterFace() {
   return (
@@ -20,7 +19,7 @@ export default function alertInterFace() {
       </div>
 
       <div className="grid gap-4 grid-cols-2">
-        <Card className="border-0 shadow-lg">
+        <Card className="shadow-lg">
           <CardHeader>
             <CardTitle className="text-md">Basic alerts</CardTitle>
           </CardHeader>
@@ -29,41 +28,36 @@ export default function alertInterFace() {
               <div>
                 <Alert>
                   <AlertTitle>
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry.
+                    Lorem Ipsum is simply dummy text of the printing.
                   </AlertTitle>
                 </Alert>
               </div>
               <div>
                 <Alert className="border-green-600 text-green-600">
                   <AlertTitle>
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry.
+                    Lorem Ipsum is simply dummy text of the printing.
                   </AlertTitle>
                 </Alert>
               </div>
               <div>
                 <Alert className="border-sky-600 text-sky-600">
                   <AlertTitle>
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry.
+                    Lorem Ipsum is simply dummy text of the printing.
                   </AlertTitle>
                 </Alert>
               </div>
               <div>
                 <Alert variant="destructive">
                   <AlertTitle>
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry.
+                    Lorem Ipsum is simply dummy text of the printing.
                   </AlertTitle>
                 </Alert>
               </div>
             </div>
           </CardContent>
-          <CardFooter className="flex justify-between"></CardFooter>
         </Card>
 
-        <Card className="border-0 shadow-lg">
+        <Card className="shadow-lg">
           <CardHeader>
             <CardTitle className="text-md">Alerts with icon</CardTitle>
           </CardHeader>
@@ -71,25 +65,25 @@ export default function alertInterFace() {
             <div class="flex flex-col space-y-4">
               <div>
                 <Alert>
+                  <Info className="h-4 w-4" />
                   <AlertTitle>
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry.
+                    Lorem Ipsum is simply dummy text of the printing.
                   </AlertTitle>
                 </Alert>
               </div>
               <div>
                 <Alert className="border-green-600 text-green-600">
+                  <Info className="h-4 w-4 !text-green-600" />
                   <AlertTitle>
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry.
+                    Lorem Ipsum is simply dummy text of the printing.
                   </AlertTitle>
                 </Alert>
               </div>
               <div>
                 <Alert className="border-sky-600 text-sky-600">
+                  <Info className="h-4 w-4 !text-sky-600" />
                   <AlertTitle>
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry.
+                    Lorem Ipsum is simply dummy text of the printing.
                   </AlertTitle>
                 </Alert>
               </div>
@@ -97,73 +91,112 @@ export default function alertInterFace() {
                 <Alert variant="destructive">
                   <ShieldAlert className="h-4 w-4" />
                   <AlertTitle>
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry.
+                    Lorem Ipsum is simply dummy text of the printing.
                   </AlertTitle>
                 </Alert>
               </div>
             </div>
           </CardContent>
-          <CardFooter className="flex justify-between"></CardFooter>
         </Card>
 
-        <Card className="border-0 shadow-lg">
-          <CardHeader>
-            <CardTitle className="text-md">Dismissible alerts</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <Alert>
-              <Terminal className="h-4 w-4" />
-              <AlertTitle>Heads up!</AlertTitle>
-              <AlertDescription>
-                You can add components to your app using the cli.
-              </AlertDescription>
-            </Alert>
-          </CardContent>
-          <CardFooter className="flex justify-between"></CardFooter>
-        </Card>
-
-        <Card className="border-0 shadow-lg">
+        <Card className="shadow-lg">
           <CardHeader>
             <CardTitle className="text-md">Alert with a description</CardTitle>
           </CardHeader>
           <CardContent>
-            <Alert>
-              <Terminal className="h-4 w-4" />
-              <AlertTitle>Heads up!</AlertTitle>
-              <AlertDescription>
-                You can add components to your app using the cli.
-              </AlertDescription>
-            </Alert>
+            <div class="flex flex-col space-y-4">
+              <div>
+                <Alert>
+                  <Info className="h-4 w-4" />
+                  <AlertTitle>Heads up!</AlertTitle>
+                  <AlertDescription className="text-gray-600">
+                    You can add components to your app using the cli.
+                  </AlertDescription>
+                </Alert>
+              </div>
+              <div>
+                <Alert className="border-green-600 text-green-600">
+                  <Info className="h-4 w-4 !text-green-600" />
+                  <AlertTitle>
+                    Lorem Ipsum is simply dummy text of the printing.
+                  </AlertTitle>
+                  <AlertDescription className="text-gray-600">
+                    You can add components to your app using the cli.
+                  </AlertDescription>
+                </Alert>
+              </div>
+
+              <div>
+                <Alert className="border-sky-600 text-sky-600">
+                  <Info className="h-4 w-4 !text-sky-600" />
+                  <AlertTitle>
+                    Lorem Ipsum is simply dummy text of the printing.
+                  </AlertTitle>
+                  <AlertDescription className="text-gray-600">
+                    You can add components to your app using the cli.
+                  </AlertDescription>
+                </Alert>
+              </div>
+
+              <div>
+                <Alert variant="destructive">
+                  <ShieldAlert className="h-4 w-4" />
+                  <AlertTitle>
+                    Lorem Ipsum is simply dummy text of the printing.
+                  </AlertTitle>
+                  <AlertDescription className="text-gray-600">
+                    You can add components to your app using the cli.
+                  </AlertDescription>
+                </Alert>
+              </div>
+            </div>
           </CardContent>
-          <CardFooter className="flex justify-between"></CardFooter>
         </Card>
 
-        {/* <div>
-          <h5 className="mb-3">1. Default Alert</h5>
-        </div>
+        <Card className="shadow-lg">
+          <CardHeader>
+            <CardTitle className="text-md">Important alerts</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div class="flex flex-col space-y-4">
+              <div>
+                <Alert className="bg-gray-600 text-white border-0">
+                  <Info className="h-4 w-4 !text-white" />
+                  <AlertTitle>Heads up!</AlertTitle>
+                </Alert>
+              </div>
+              <div>
+                <Alert className="bg-green-600 text-white border-0">
+                  <Info className="h-4 w-4 !text-white" />
+                  <AlertTitle>
+                    Lorem Ipsum is simply dummy text of the printing.
+                  </AlertTitle>
+                </Alert>
+              </div>
 
-        <div>
-          <h5 className="mb-3">2. Success Alert</h5>
-          <Alert className="border-green-600 text-green-600">
-            <CheckCheck className="h-4 w-4 text-green-600" />
-            <AlertTitle>Heads up!</AlertTitle>
-            <AlertDescription>
-              You can add components to your app using the cli.
-            </AlertDescription>
-          </Alert>
-        </div>
+              <div>
+                <Alert className="bg-sky-600 text-white border-0">
+                  <Info className="h-4 w-4 !text-white" />
+                  <AlertTitle>
+                    Lorem Ipsum is simply dummy text of the printing.
+                  </AlertTitle>
+                </Alert>
+              </div>
 
-        <div>
-          <h5 className="mb-3">3. Danger Alert</h5>
-          <Alert variant="destructive">
-            <ShieldAlert className="h-4 w-4" />
-            <AlertTitle>Heads up!</AlertTitle>
-            <AlertDescription>
-              You can add components to your app using the cli.
-            </AlertDescription>
-          </Alert>
-        </div> */}
+              <div>
+                <Alert
+                  variant="destructive"
+                  className="bg-red-600 text-white border-0"
+                >
+                  <ShieldAlert className="h-4 w-4 !text-white" />
+                  <AlertTitle>
+                    Lorem Ipsum is simply dummy text of the printing.
+                  </AlertTitle>
+                </Alert>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
       </div>
     </>
   );
