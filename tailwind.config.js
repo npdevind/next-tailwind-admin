@@ -84,9 +84,6 @@ module.exports = {
       fontFamily: {
         sans: ["var(--font-sans)", ...fontFamily.sans],
       },
-      // backgroundImage: {
-      //   "login-bg": "url('/assets/login.svg')",
-      // },
     },
   },
   plugins: [require("tailwindcss-animate")],

@@ -1,7 +1,8 @@
 {
-    "workbench.colorCustomizations": {
-        "activityBar.background": "#1B331C",
-        "titleBar.activeBackground": "#254727",
-        "titleBar.activeForeground": "#F9FCF9"
-    }
+  "workbench.colorCustomizations": {
+    "activityBar.background": "#1B331C",
+    "titleBar.activeBackground": "#254727",
+    "titleBar.activeForeground": "#F9FCF9"
+  },
+  "cSpell.words": ["Nilmoni", "Patra"]
 }

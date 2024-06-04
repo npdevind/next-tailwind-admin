@@ -1,7 +1,6 @@
 import Link from "next/link";
 import Header from "./layout/header";
-import { Bell, Package2 } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Package2 } from "lucide-react";
 import Sidebar from "./layout/sidebar";
 
 export default function RootLayout({ children }) {
@@ -21,6 +20,7 @@ export default function RootLayout({ children }) {
         </div>
         <div className="flex flex-col">
           <Header />
+
           <main className="flex flex-1 flex-col gap-4 p-4 lg:gap-6 lg:p-6">
             {children}
           </main>

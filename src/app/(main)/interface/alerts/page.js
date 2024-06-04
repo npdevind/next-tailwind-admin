@@ -24,7 +24,7 @@ export default function alertInterFace() {
             <CardTitle className="text-md">Basic alerts</CardTitle>
           </CardHeader>
           <CardContent>
-            <div class="flex flex-col space-y-4">
+            <div className="flex flex-col space-y-4">
               <div>
                 <Alert>
                   <AlertTitle>
@@ -62,7 +62,7 @@ export default function alertInterFace() {
             <CardTitle className="text-md">Alerts with icon</CardTitle>
           </CardHeader>
           <CardContent>
-            <div class="flex flex-col space-y-4">
+            <div className="flex flex-col space-y-4">
               <div>
                 <Alert>
                   <Info className="h-4 w-4" />
@@ -104,7 +104,7 @@ export default function alertInterFace() {
             <CardTitle className="text-md">Alert with a description</CardTitle>
           </CardHeader>
           <CardContent>
-            <div class="flex flex-col space-y-4">
+            <div className="flex flex-col space-y-4">
               <div>
                 <Alert>
                   <Info className="h-4 w-4" />
@@ -158,7 +158,7 @@ export default function alertInterFace() {
             <CardTitle className="text-md">Important alerts</CardTitle>
           </CardHeader>
           <CardContent>
-            <div class="flex flex-col space-y-4">
+            <div className="flex flex-col space-y-4">
               <div>
                 <Alert className="bg-gray-600 text-white border-0">
                   <Info className="h-4 w-4 !text-white" />

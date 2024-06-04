@@ -14,7 +14,7 @@ export default function badges() {
           <CardTitle className="text-md">Shadcn Basic</CardTitle>
         </CardHeader>
         <CardContent>
-          <div class="flex gap-4">
+          <div className="flex gap-4">
             <Badge>Badge</Badge>
             <Badge variant="secondary">Secondary</Badge>
             <Badge variant="destructive">Destructive</Badge>
@@ -25,7 +25,7 @@ export default function badges() {
           <CardTitle className="text-md">Custom</CardTitle>
         </CardHeader>
         <CardContent>
-          <div class="flex gap-4">
+          <div className="flex gap-4">
             <Badge className="bg-blue-600 hover:bg-blue-600 rounded-sm">
               Badge
             </Badge>

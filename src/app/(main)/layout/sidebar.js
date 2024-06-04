@@ -11,6 +11,7 @@ import {
   FileLock2,
   Badge,
   Box,
+  CreditCard,
 } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -51,6 +52,11 @@ const arrayCommonItem = [
         item: "Buttons",
         icon: <Box className="h-4 w-4" />,
         link: "/interface/buttons",
+      },
+      {
+        item: "Cards",
+        icon: <CreditCard className="h-4 w-4" />,
+        link: "/interface/cards",
       },
     ],
   },
