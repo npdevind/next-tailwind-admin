@@ -1,14 +1,6 @@
 import { Alert, AlertDescription, AlertTitle } from "@/app/ui/alert";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-
-import { Info, ShieldAlert, Terminal } from "lucide-react";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Info, ShieldAlert } from "lucide-react";
 
 export default function alertInterFace() {
   return (
@@ -18,7 +10,7 @@ export default function alertInterFace() {
         <span className="opacity-55">npx shadcn-ui@latest add alert</span>
       </div>
 
-      <div className="grid gap-4 grid-cols-2">
+      <div className="grid gap-4 grid-cols-2 max-sm:grid-cols-1">
         <Card className="shadow-lg">
           <CardHeader>
             <CardTitle className="text-md">Basic alerts</CardTitle>

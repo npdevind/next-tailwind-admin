@@ -15,7 +15,7 @@ export default function accordionInterFace() {
         <span className="opacity-55">npx shadcn-ui@latest add accordion</span>
       </div>
 
-      <div className="grid grid-cols-2 gap-4">
+      <div className="grid grid-cols-2 gap-4 max-md:grid-cols-1">
         <Card className="shadow-lg">
           <CardHeader>
             <CardTitle>Simple Accordion</CardTitle>

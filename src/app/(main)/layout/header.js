@@ -1,5 +1,5 @@
 "use client";
-import { Badge } from "@/components/ui/badge";
+
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -19,14 +19,24 @@ import {
 import { Input } from "@/components/ui/input";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import {
+  Badge,
+  Box,
+  ChevronDown,
+  ChevronUp,
+  CreditCard,
+  FileLock2,
   Home,
   LineChart,
+  Lock,
+  LogIn,
   Menu,
   Package,
   Package2,
   Search,
   ShoppingCart,
+  Siren,
   Users,
+  Webhook,
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -35,8 +45,81 @@ import userLogo from "../../../assets/user.png";
 import LightAndDark from "./LightAndDark";
 import Notification from "./Notification";
 import Social from "./social";
+import { usePathname } from "next/navigation";
+import { useState } from "react";
+const arrayCommonItem = [
+  {
+    item: "Dashboard",
+    icon: <Home className="h-4 w-4" />,
+    link: "/dashboard",
+  },
+  {
+    item: "Charts",
+    icon: <ShoppingCart className="h-4 w-4" />,
+    link: "/charts",
+  },
+  {
+    item: "Interface",
+    icon: <Webhook className="h-4 w-4" />,
+    link: "",
+    subMenu: [
+      {
+        item: "Alerts",
+        icon: <Siren className="h-4 w-4" />,
+        link: "/interface/alerts",
+      },
+      {
+        item: "Accordion",
+        icon: <ChevronDown className="h-4 w-4" />,
+        link: "/interface/accordion",
+      },
+      {
+        item: "Badges",
+        icon: <Badge className="h-4 w-4" />,
+        link: "/interface/badges",
+      },
+      {
+        item: "Buttons",
+        icon: <Box className="h-4 w-4" />,
+        link: "/interface/buttons",
+      },
+      {
+        item: "Cards",
+        icon: <CreditCard className="h-4 w-4" />,
+        link: "/interface/cards",
+      },
+    ],
+  },
+];
+
+const arrayAuthItem = [
+  {
+    item: "Log In",
+    icon: <Lock className="h-4 w-4" />,
+    link: "/auth/login",
+  },
+  {
+    item: "Sign Up",
+    icon: <LogIn className="h-4 w-4" />,
+    link: "/auth/signup",
+  },
+  {
+    item: "Forgot Password",
+    icon: <FileLock2 className="h-4 w-4" />,
+    link: "/auth/forgot-password",
+  },
+];
 
 export default function Header() {
+  const pathName = usePathname();
+  const [openSubMenus, setOpenSubMenus] = useState({});
+
+  const toggleSubMenu = (index) => {
+    setOpenSubMenus((prevState) => ({
+      ...prevState,
+      [index]: !prevState[index],
+    }));
+  };
   return (
     <>
       <header className="flex h-14 items-center gap-1 border-b bg-muted/40 px-4 lg:h-[60px] lg:px-6">
@@ -52,68 +135,70 @@ export default function Header() {
             </Button>
           </SheetTrigger>
           <SheetContent side="left" className="flex flex-col">
-            <nav className="grid gap-2 text-lg font-medium">
-              <Link
-                href="#"
-                className="flex items-center gap-2 text-lg font-semibold"
-              >
-                <Package2 className="h-6 w-6" />
-                <span className="sr-only">Acme Inc</span>
-              </Link>
-              <Link
-                href="#"
-                className="mx-[-0.65rem] flex items-center gap-4 rounded-xl px-3 py-2 text-muted-foreground hover:text-foreground"
-              >
-                <Home className="h-5 w-5" />
-                Dashboard
-              </Link>
-              <Link
-                href="#"
-                className="mx-[-0.65rem] flex items-center gap-4 rounded-xl bg-muted px-3 py-2 text-foreground hover:text-foreground"
-              >
-                <ShoppingCart className="h-5 w-5" />
-                Orders
-                <Badge className="ml-auto flex h-6 w-6 shrink-0 items-center justify-center rounded-full">
-                  6
-                </Badge>
-              </Link>
-              <Link
-                href="#"
-                className="mx-[-0.65rem] flex items-center gap-4 rounded-xl px-3 py-2 text-muted-foreground hover:text-foreground"
-              >
-                <Package className="h-5 w-5" />
-                Products
-              </Link>
-              <Link
-                href="#"
-                className="mx-[-0.65rem] flex items-center gap-4 rounded-xl px-3 py-2 text-muted-foreground hover:text-foreground"
-              >
-                <Users className="h-5 w-5" />
-                Customers
-              </Link>
-              <Link
-                href="#"
-                className="mx-[-0.65rem] flex items-center gap-4 rounded-xl px-3 py-2 text-muted-foreground hover:text-foreground"
-              >
-                <LineChart className="h-5 w-5" />
-                Analytics
-              </Link>
+            <nav className="grid items-start px-2 text-sm font-medium lg:px-4">
+              {arrayCommonItem.map((item, index) => (
+                <div key={index}>
+                  <Link
+                    href={item.link}
+                    className={
+                      pathName === item.link
+                        ? "flex items-center gap-3 rounded-lg px-3 py-2 transition-all hover:text-primary bg-muted"
+                        : "flex items-center gap-3 rounded-lg px-3 py-2 transition-all hover:text-primary text-muted-foreground"
+                    }
+                    onClick={(e) => {
+                      if (item.subMenu) {
+                        e.preventDefault();
+                        toggleSubMenu(index);
+                      }
+                    }}
+                  >
+                    {item.icon} {item.item}
+                    {item.subMenu && (
+                      <span className="ml-auto">
+                        {openSubMenus[index] ? (
+                          <ChevronUp className="h-4 w-4" />
+                        ) : (
+                          <ChevronDown className="h-4 w-4" />
+                        )}
+                      </span>
+                    )}
+                  </Link>
+                  {item.subMenu && openSubMenus[index] && (
+                    <div className="pl-6 mb-2">
+                      {item.subMenu.map((subItem, subIndex) => (
+                        <Link
+                          key={subIndex}
+                          href={subItem.link}
+                          className={
+                            pathName === subItem.link
+                              ? "flex items-center gap-3 rounded-lg px-3 py-2 transition-all hover:text-primary bg-muted"
+                              : "flex items-center gap-3 rounded-lg px-3 py-2 transition-all hover:text-primary text-muted-foreground "
+                          }
+                        >
+                          {subItem.icon} {subItem.item}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ))}
             </nav>
-            <div className="mt-auto">
-              <Card>
-                <CardHeader>
-                  <CardTitle>Upgrade to Pro</CardTitle>
-                  <CardDescription>
-                    Unlock all features and get unlimited access to our support
-                    team.
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <Button size="sm" className="w-full">
-                    Upgrade
-                  </Button>
-                </CardContent>
-              </Card>
+            <div className="border-t py-2">
+              <nav className="grid items-start px-2 text-sm font-medium lg:px-4">
+                {arrayAuthItem.map((item, index) => (
+                  <Link
+                    key={index}
+                    href={item.link}
+                    className={
+                      pathName === item.link
+                        ? "flex items-center gap-3 rounded-lg px-3 py-2 transition-all hover:text-primary bg-muted"
+                        : "flex items-center gap-3 rounded-lg px-3 py-2 transition-all hover:text-primary text-muted-foreground"
+                    }
+                  >
+                    {item.icon} {item.item}
+                  </Link>
+                ))}
+              </nav>
             </div>
           </SheetContent>
         </Sheet>
