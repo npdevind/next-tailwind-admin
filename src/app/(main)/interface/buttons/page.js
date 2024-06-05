@@ -1,13 +1,14 @@
+import PageTitle from "@/components/pageTitle";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export default function interfaceButton() {
   return (
     <>
-      <div className="flex flex-col">
-        <h1 className="text-lg font-semibold md:text-2xl">Button</h1>
-        <span className="opacity-55">npx shadcn-ui@latest add button</span>
-      </div>
+      <PageTitle
+        title="Buttons"
+        description="npx shadcn-ui@latest add button"
+      />
 
       <Card className="">
         <CardHeader>

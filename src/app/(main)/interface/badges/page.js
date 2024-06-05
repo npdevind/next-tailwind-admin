@@ -1,13 +1,11 @@
 import { Badge } from "@/app/ui/badge";
+import PageTitle from "@/components/pageTitle";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export default function badges() {
   return (
     <>
-      <div className="flex flex-col">
-        <h1 className="text-lg font-semibold md:text-2xl">Badge</h1>
-        <span className="opacity-55">npx shadcn-ui@latest add badge</span>
-      </div>
+      <PageTitle title="Badge" description="npx shadcn-ui@latest add badge" />
 
       <Card className=" shadow-lg">
         <CardHeader>

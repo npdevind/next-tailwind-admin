@@ -4,16 +4,17 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/app/ui/accordion";
+import PageTitle from "@/components/pageTitle";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { AlignJustify, BookAudio, Laugh, LayoutList } from "lucide-react";
 
 export default function accordionInterFace() {
   return (
     <>
-      <div className="flex flex-col">
-        <h1 className="text-lg font-semibold md:text-2xl">Accordion</h1>
-        <span className="opacity-55">npx shadcn-ui@latest add accordion</span>
-      </div>
+      <PageTitle
+        title="Accordion"
+        description="npx shadcn-ui@latest add accordion"
+      />
 
       <div className="grid grid-cols-2 gap-4 max-md:grid-cols-1">
         <Card className="shadow-lg">

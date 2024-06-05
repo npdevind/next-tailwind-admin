@@ -9,14 +9,12 @@ import {
 import { CircleChevronRight, Star } from "lucide-react";
 import Image from "next/image";
 import cardTop from "../../../../assets/card-top.jpg";
+import PageTitle from "@/components/pageTitle";
 
 export default function interfaceCard() {
   return (
     <>
-      <div className="flex flex-col">
-        <h1 className="text-lg font-semibold md:text-2xl">Card</h1>
-        <span className="opacity-55">npx shadcn-ui@latest add card</span>
-      </div>
+      <PageTitle title="Cards" description="npx shadcn-ui@latest add card" />
 
       <div className="grid grid-cols-4 gap-4">
         <p className="col-start-1 col-span-4 text-lg flex gap-1 font-semibold">

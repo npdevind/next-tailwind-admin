@@ -17,6 +17,7 @@ import p6 from "../../../../assets/carousel/6.jpg";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import Autoplay from "embla-carousel-autoplay";
+import PageTitle from "@/components/pageTitle";
 
 export default function CarouselPage() {
   const [api, setApi] = useState();
@@ -42,10 +43,10 @@ export default function CarouselPage() {
 
   return (
     <>
-      <div className="flex flex-col">
-        <h1 className="text-lg font-semibold md:text-2xl">Carousel</h1>
-        <span className="opacity-55">npx shadcn-ui@latest add carousel</span>
-      </div>
+      <PageTitle
+        title="Carousel"
+        description="npx shadcn-ui@latest add carousel"
+      />
 
       <div className="grid grid-cols-2 gap-4 place-items-center h-56">
         <Carousel className="w-full max-w-lg">

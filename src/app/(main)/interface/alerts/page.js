@@ -1,14 +1,12 @@
 import { Alert, AlertDescription, AlertTitle } from "@/app/ui/alert";
+import PageTitle from "@/components/pageTitle";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Info, ShieldAlert } from "lucide-react";
 
 export default function alertInterFace() {
   return (
     <>
-      <div className="flex flex-col">
-        <h1 className="text-lg font-semibold md:text-2xl">Alerts</h1>
-        <span className="opacity-55">npx shadcn-ui@latest add alert</span>
-      </div>
+      <PageTitle title="Alerts" description="npx shadcn-ui@latest add alert" />
 
       <div className="grid gap-4 grid-cols-2 max-sm:grid-cols-1">
         <Card className="shadow-lg">
