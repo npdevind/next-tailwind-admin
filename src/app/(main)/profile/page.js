@@ -25,23 +25,23 @@ import { FaLinkedin } from "react-icons/fa";
 export default function profile() {
   return (
     <>
-      <div className="grid grid-cols-3 gap-2">
+      <div className="grid grid-cols-3 gap-2 max-sm:grid-cols-1">
         <div className="col-span-2">
-          <div className="absolute overflow-hidden md:top-40 md:left-80">
-            <Avatar className="h-28 w-28 border-2 border-white dark:border-black ">
+          <div className="absolute overflow-hidden md:top-40 md:left-80  max-md:top-40 max-md:left-32">
+            <Avatar className="h-28 w-28 border-2 border-white dark:border-black">
               <Image src={userPng} alt="user" />
               <AvatarFallback>CN</AvatarFallback>
             </Avatar>
           </div>
 
-          <Card className="rounded-b-lg shadow-lg  mb-4">
+          <Card className="rounded-b-lg shadow-lg mb-4">
             <Image
               className="w-full rounded-t-lg h-36"
               src={profileCover}
               alt="Sunset in the mountains"
             />
-            <CardHeader className="mt-10 grid grid-cols-3 gap-4">
-              <div>
+            <CardHeader className="mt-10 grid grid-cols-3 gap-4 ">
+              <div className="max-md:flex max-md:flex-col max-md:items-center max-md:text-center max-md:w-72">
                 <CardTitle className="grid">
                   <span>Nilmoni Patra</span>
                   <span className="text-sm">Professional Web Developer</span>
@@ -51,25 +51,18 @@ export default function profile() {
                   <span className="text-xs font-semibold ">Kolkata, India</span>
                 </CardDescription>
               </div>
-              <div className="col-end-6 col-span-2">
+              <div className="col-end-6 col-span-2 max-md:col-end-1 max-md:flex max-md:flex-col max-md:items-center max-md:text-center max-md:w-72">
                 <div className="flex gap-2">
                   <Button className="bg-blue-600 gap-1 p-2">
                     <Check className="h-4 w-4" /> Following
                   </Button>
 
-                  <Button variant="outline" className="p-2">
+                  <Button variant="outline" className="p-2 max-md:hidden">
                     <Ellipsis className="h-4 w-4" />
                   </Button>
                 </div>
               </div>
             </CardHeader>
-            <CardContent className="flex gap-4 cursor-pointer">
-              <IoLogoGithub className="h-6 w-6" />
-              <FaLinkedin className="h-6 w-6 fill-blue-600" />
-              <FaFacebook className="h-6 w-6 fill-blue-600" />
-              <FaInstagram className="h-6 w-6 fill-red-600" />
-              <FaSquareXTwitter className="h-6 w-6 " />
-            </CardContent>
           </Card>
 
           <Tabs defaultValue="personal">
@@ -186,18 +179,113 @@ export default function profile() {
           </Tabs>
         </div>
 
-        <div>
-          <Card className="shadow-lg ">
+        <div className="grid gap-4 grid-cols-1 max-sm:grid-cols-1">
+          <Card className="shadow-lg">
             <CardHeader>
-              <CardTitle>Card Title</CardTitle>
-              <CardDescription>
-                <span className="text-xs font-semibold text-black">
-                  shadcn basic card with light color
-                </span>
-              </CardDescription>
+              <CardTitle>Social</CardTitle>
+              <div className="border-t"></div>
             </CardHeader>
-            <CardContent>This is card content</CardContent>
-            <CardFooter>This is card footer</CardFooter>
+            <CardContent className="grid grid-cols-5 place-items-stretch">
+              <IoLogoGithub className="h-10 w-10" />
+              <FaLinkedin className="h-10 w-10 fill-blue-600" />
+              <FaFacebook className="h-10 w-10 fill-blue-600" />
+              <FaInstagram className="h-10 w-10 fill-red-600" />
+              <FaSquareXTwitter className="h-10 w-10 " />
+            </CardContent>
+          </Card>
+
+          <Card className="shadow-lg">
+            <CardHeader>
+              <CardTitle>Reviews</CardTitle>
+              <div className="border-t"></div>
+            </CardHeader>
+            <CardContent>
+              <div className="grid gap-4 grid-cols-1 max-sm:grid-cols-1">
+                <div className="flex items-center">
+                  <Image
+                    className="w-10 h-10 rounded-full mr-4"
+                    src="https://avatar.iran.liara.run/public/7"
+                    width="100"
+                    height="100"
+                    alt="Avatar of Jonathan Reinink"
+                  />
+                  <div className="text-sm">
+                    <p className=" leading-none">Jonathan Reinink</p>
+                    <p className="text-gray-600">Aug 18</p>
+                  </div>
+                </div>
+
+                <div className="flex items-center">
+                  <Image
+                    className="w-10 h-10 rounded-full mr-4"
+                    src="https://avatar.iran.liara.run/public/9"
+                    width="100"
+                    height="100"
+                    alt="Avatar of Jonathan Reinink"
+                  />
+                  <div className="text-sm">
+                    <p className=" leading-none">Jonathan Reinink</p>
+                    <p className="text-gray-600">Aug 18</p>
+                  </div>
+                </div>
+
+                <div className="flex items-center">
+                  <Image
+                    className="w-10 h-10 rounded-full mr-4"
+                    src="https://avatar.iran.liara.run/public/93"
+                    width="100"
+                    height="100"
+                    alt="Avatar of Jonathan Reinink"
+                  />
+                  <div className="text-sm">
+                    <p className=" leading-none">Jonathan Reinink</p>
+                    <p className="text-gray-600">Aug 18</p>
+                  </div>
+                </div>
+
+                <div className="flex items-center">
+                  <Image
+                    className="w-10 h-10 rounded-full mr-4"
+                    src="https://avatar.iran.liara.run/public/15"
+                    width="100"
+                    height="100"
+                    alt="Avatar of Jonathan Reinink"
+                  />
+                  <div className="text-sm">
+                    <p className=" leading-none">Jonathan Reinink</p>
+                    <p className="text-gray-600">Aug 18</p>
+                  </div>
+                </div>
+
+                <div className="flex items-center">
+                  <Image
+                    className="w-10 h-10 rounded-full mr-4"
+                    src="https://avatar.iran.liara.run/public/45"
+                    width="100"
+                    height="100"
+                    alt="Avatar of Jonathan Reinink"
+                  />
+                  <div className="text-sm">
+                    <p className=" leading-none">Jonathan Reinink</p>
+                    <p className="text-gray-600">Aug 18</p>
+                  </div>
+                </div>
+
+                <div className="flex items-center">
+                  <Image
+                    className="w-10 h-10 rounded-full mr-4"
+                    src="https://avatar.iran.liara.run/public/70"
+                    width="100"
+                    height="100"
+                    alt="Avatar of Jonathan Reinink"
+                  />
+                  <div className="text-sm">
+                    <p className=" leading-none">Jonathan Reinink</p>
+                    <p className="text-gray-600">Aug 18</p>
+                  </div>
+                </div>
+              </div>
+            </CardContent>
           </Card>
         </div>
       </div>

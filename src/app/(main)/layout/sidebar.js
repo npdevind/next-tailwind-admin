@@ -12,6 +12,8 @@ import {
   Badge,
   Box,
   CreditCard,
+  AppWindowMac,
+  BarChartBig,
 } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -25,7 +27,7 @@ const arrayCommonItem = [
   },
   {
     item: "Charts",
-    icon: <ShoppingCart className="h-4 w-4" />,
+    icon: <BarChartBig className="h-4 w-4" />,
     link: "/charts",
   },
   {
@@ -57,6 +59,11 @@ const arrayCommonItem = [
         item: "Cards",
         icon: <CreditCard className="h-4 w-4" />,
         link: "/interface/cards",
+      },
+      {
+        item: "Carousel",
+        icon: <AppWindowMac className="h-4 w-4" />,
+        link: "/interface/carousel",
       },
     ],
   },

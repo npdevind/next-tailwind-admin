@@ -88,6 +88,11 @@ const arrayCommonItem = [
         icon: <CreditCard className="h-4 w-4" />,
         link: "/interface/cards",
       },
+      {
+        item: "Carousel",
+        icon: <CreditCard className="h-4 w-4" />,
+        link: "/interface/carousel",
+      },
     ],
   },
 ];
