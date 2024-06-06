@@ -14,6 +14,7 @@ import {
   CreditCard,
   AppWindowMac,
   BarChartBig,
+  Table,
 } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -64,6 +65,16 @@ const arrayCommonItem = [
         item: "Carousel",
         icon: <AppWindowMac className="h-4 w-4" />,
         link: "/interface/carousel",
+      },
+      {
+        item: "Data Table",
+        icon: <Table className="h-4 w-4" />,
+        link: "/interface/datatable",
+      },
+      {
+        item: "Offcanvas",
+        icon: <Table className="h-4 w-4" />,
+        link: "/interface/offcanvas",
       },
     ],
   },

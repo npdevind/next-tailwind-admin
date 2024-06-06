@@ -21,7 +21,7 @@ export default function RootLayout({ children }) {
             <Sidebar />
           </div>
         </div>
-        <div className="flex flex-col h-screen">
+        <div className="flex flex-col ">
           <Header />
           <main className="flex-1 overflow-y-auto flex-col gap-4 p-4 lg:gap-6 lg:p-6">
             {children}

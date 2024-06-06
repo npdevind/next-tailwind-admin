@@ -16,7 +16,13 @@ import { Label } from "@/app/ui/label";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/app/ui/tabs";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { Check, Ellipsis, MessageSquareText } from "lucide-react";
+import {
+  BadgeCheck,
+  Check,
+  Ellipsis,
+  MessageSquareText,
+  Star,
+} from "lucide-react";
 
 import { FaFacebook, FaInstagram, FaSquareXTwitter } from "react-icons/fa6";
 import { IoLogoGithub } from "react-icons/io";
@@ -25,9 +31,9 @@ import { FaLinkedin } from "react-icons/fa";
 export default function profile() {
   return (
     <>
-      <div className="grid grid-cols-3 gap-2 max-sm:grid-cols-1">
-        <div className="col-span-2">
-          <div className="absolute overflow-hidden md:top-40 md:left-80  max-md:top-40 max-md:left-32">
+      <div className="grid grid-cols-4 gap-2 max-md:grid-cols-1">
+        <div className="col-span-2 relative">
+          <div className="absolute  md:top-20 md:left-10  max-md:top-20 max-md:left-28">
             <Avatar className="h-28 w-28 border-2 border-white dark:border-black">
               <Image src={userPng} alt="user" />
               <AvatarFallback>CN</AvatarFallback>
@@ -40,10 +46,13 @@ export default function profile() {
               src={profileCover}
               alt="Sunset in the mountains"
             />
-            <CardHeader className="mt-10 grid grid-cols-3 gap-4 ">
+            <CardHeader className="mt-10 grid grid-cols-2 gap-4 ">
               <div className="max-md:flex max-md:flex-col max-md:items-center max-md:text-center max-md:w-72">
                 <CardTitle className="grid">
-                  <span>Nilmoni Patra</span>
+                  <span className="flex gap-1">
+                    Nilmoni Patra
+                    <BadgeCheck className="fill-blue-600 stroke-white-600 text-white" />
+                  </span>
                   <span className="text-sm">Professional Web Developer</span>
                 </CardTitle>
                 <CardDescription className="flex gap-1">
@@ -65,124 +74,38 @@ export default function profile() {
             </CardHeader>
           </Card>
 
-          <Tabs defaultValue="personal">
-            <TabsList className="grid w-full grid-cols-4 ">
-              <TabsTrigger value="personal" className="hover:text-blue-600 ">
-                Personal
-              </TabsTrigger>
-              <TabsTrigger value="skill" className="hover:text-blue-600">
-                Skill
-              </TabsTrigger>
-              <TabsTrigger value="education" className="hover:text-blue-600">
-                Education
-              </TabsTrigger>
-              <TabsTrigger value="other" className="hover:text-blue-600">
-                Other
-              </TabsTrigger>
-            </TabsList>
-            <TabsContent value="personal">
-              <Card>
-                <CardHeader>
-                  <CardTitle>Account</CardTitle>
-                  <CardDescription>
-                    Make changes to your account here. Click save when youre
-                    done.
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="space-y-2">
-                  <div className="space-y-1">
-                    <Label htmlFor="name">Name</Label>
-                    <Input id="name" defaultValue="Pedro Duarte" />
-                  </div>
-                  <div className="space-y-1">
-                    <Label htmlFor="username">Username</Label>
-                    <Input id="username" defaultValue="@peduarte" />
-                  </div>
-                </CardContent>
-                <CardFooter>
-                  <Button>Save changes</Button>
-                </CardFooter>
-              </Card>
-            </TabsContent>
-            <TabsContent value="skill">
-              <Card>
-                <CardHeader>
-                  <CardTitle>Password</CardTitle>
-                  <CardDescription>
-                    Change your password here. After saving, youll be logged
-                    out.
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="space-y-2">
-                  <div className="space-y-1">
-                    <Label htmlFor="current">Current password</Label>
-                    <Input id="current" type="password" />
-                  </div>
-                  <div className="space-y-1">
-                    <Label htmlFor="new">New password</Label>
-                    <Input id="new" type="password" />
-                  </div>
-                </CardContent>
-                <CardFooter>
-                  <Button>Save password</Button>
-                </CardFooter>
-              </Card>
-            </TabsContent>
-            <TabsContent value="education">
-              <Card>
-                <CardHeader>
-                  <CardTitle>Password</CardTitle>
-                  <CardDescription>
-                    Change your password here. After saving, youll be logged
-                    out.
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="space-y-2">
-                  <div className="space-y-1">
-                    <Label htmlFor="current">Current password</Label>
-                    <Input id="current" type="password" />
-                  </div>
-                  <div className="space-y-1">
-                    <Label htmlFor="new">New password</Label>
-                    <Input id="new" type="password" />
-                  </div>
-                </CardContent>
-                <CardFooter>
-                  <Button>Save password</Button>
-                </CardFooter>
-              </Card>
-            </TabsContent>
-            <TabsContent value="other">
-              <Card>
-                <CardHeader>
-                  <CardTitle>Password</CardTitle>
-                  <CardDescription>
-                    Change your password here. After saving, youll be logged
-                    out.
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="space-y-2">
-                  <div className="space-y-1">
-                    <Label htmlFor="current">Current password</Label>
-                    <Input id="current" type="password" />
-                  </div>
-                  <div className="space-y-1">
-                    <Label htmlFor="new">New password</Label>
-                    <Input id="new" type="password" />
-                  </div>
-                </CardContent>
-                <CardFooter>
-                  <Button>Save password</Button>
-                </CardFooter>
-              </Card>
-            </TabsContent>
-          </Tabs>
+          <Card className="shadow-lg">
+            <CardContent className="mt-4">
+              <div className="flex flex-col">
+                <div className="font-semibold">About Me</div>
+                <div className="border-t-2 mb-2"></div>
+                <div className="text-sm">
+                  I am a passionate and skilled web developer with extensive
+                  experience in creating dynamic and user-friendly websites and
+                  web applications. Proficient in a variety of programming
+                  languages including HTML, CSS, JavaScript, and backend
+                  technologies such as Python, PHP, and Node.js, I excels at
+                  both frontend and backend development. With a keen eye for
+                  design and a deep understanding of user experience principles,
+                  I collaborates effectively with designers and content creators
+                  to bring visually appealing and highly functional digital
+                  experiences to life. Committed to staying at the forefront of
+                  technological advancements, I continuously hones his skills to
+                  ensure that his projects are secure, scalable, and optimized
+                  for performance. When not coding, I enjoys contributing to
+                  open-source projects and participating in web development
+                  communities, where he shares knowledge and learns from fellow
+                  developers.
+                </div>
+              </div>
+            </CardContent>
+          </Card>
         </div>
 
-        <div className="grid gap-4 grid-cols-1 max-sm:grid-cols-1">
+        <div className="grid grid-cols-1 gap-4 max-md:grid-cols-1">
           <Card className="shadow-lg">
             <CardHeader>
-              <CardTitle>Social</CardTitle>
+              <CardTitle className="text-lg">Social</CardTitle>
               <div className="border-t"></div>
             </CardHeader>
             <CardContent className="grid grid-cols-5 place-items-stretch">
@@ -196,11 +119,11 @@ export default function profile() {
 
           <Card className="shadow-lg">
             <CardHeader>
-              <CardTitle>Reviews</CardTitle>
+              <CardTitle className="text-lg">Reviews</CardTitle>
               <div className="border-t"></div>
             </CardHeader>
             <CardContent>
-              <div className="grid gap-4 grid-cols-1 max-sm:grid-cols-1">
+              <div className="grid gap-4 grid-cols-1">
                 <div className="flex items-center">
                   <Image
                     className="w-10 h-10 rounded-full mr-4"
@@ -210,8 +133,13 @@ export default function profile() {
                     alt="Avatar of Jonathan Reinink"
                   />
                   <div className="text-sm">
-                    <p className=" leading-none">Jonathan Reinink</p>
-                    <p className="text-gray-600">Aug 18</p>
+                    <p className="leading-none mb-1">Jonathan Reinink</p>
+                    <div className="flex flex-row gap-1">
+                      <Star className="h-4 w-4 fill-yellow-400 stroke-yellow-500" />
+                      <Star className="h-4 w-4 fill-yellow-400 stroke-yellow-500" />
+                      <Star className="h-4 w-4 fill-yellow-400 stroke-yellow-500" />
+                      <Star className="h-4 w-4 fill-yellow-400 stroke-yellow-500" />
+                    </div>
                   </div>
                 </div>
 
@@ -224,8 +152,14 @@ export default function profile() {
                     alt="Avatar of Jonathan Reinink"
                   />
                   <div className="text-sm">
-                    <p className=" leading-none">Jonathan Reinink</p>
-                    <p className="text-gray-600">Aug 18</p>
+                    <p className="leading-none mb-1">Sonak Sunil</p>
+                    <div className="flex flex-row gap-1">
+                      <Star className="h-4 w-4 fill-yellow-400 stroke-yellow-500" />
+                      <Star className="h-4 w-4 fill-yellow-400 stroke-yellow-500" />
+                      <Star className="h-4 w-4 fill-yellow-400 stroke-yellow-500" />
+                      <Star className="h-4 w-4 fill-yellow-400 stroke-yellow-500" />
+                      <Star className="h-4 w-4 fill-yellow-400 stroke-yellow-500" />
+                    </div>
                   </div>
                 </div>
 
@@ -238,8 +172,12 @@ export default function profile() {
                     alt="Avatar of Jonathan Reinink"
                   />
                   <div className="text-sm">
-                    <p className=" leading-none">Jonathan Reinink</p>
-                    <p className="text-gray-600">Aug 18</p>
+                    <p className=" leading-none mb-1">Dr. PC Sean</p>
+                    <div className="flex flex-row gap-1">
+                      <Star className="h-4 w-4 fill-yellow-400 stroke-yellow-500" />
+                      <Star className="h-4 w-4 fill-yellow-400 stroke-yellow-500" />
+                      <Star className="h-4 w-4 fill-yellow-400 stroke-yellow-500" />
+                    </div>
                   </div>
                 </div>
 
@@ -252,8 +190,13 @@ export default function profile() {
                     alt="Avatar of Jonathan Reinink"
                   />
                   <div className="text-sm">
-                    <p className=" leading-none">Jonathan Reinink</p>
-                    <p className="text-gray-600">Aug 18</p>
+                    <p className=" leading-none mb-1">Jonh June</p>
+                    <div className="flex flex-row gap-1">
+                      <Star className="h-4 w-4 fill-yellow-400 stroke-yellow-500" />
+                      <Star className="h-4 w-4 fill-yellow-400 stroke-yellow-500" />
+                      <Star className="h-4 w-4 fill-yellow-400 stroke-yellow-500" />
+                      <Star className="h-4 w-4 fill-yellow-400 stroke-yellow-500" />
+                    </div>
                   </div>
                 </div>
 
@@ -266,8 +209,14 @@ export default function profile() {
                     alt="Avatar of Jonathan Reinink"
                   />
                   <div className="text-sm">
-                    <p className=" leading-none">Jonathan Reinink</p>
-                    <p className="text-gray-600">Aug 18</p>
+                    <p className=" leading-none mb-1">Kanbiro Jhon</p>
+                    <div className="flex flex-row gap-1">
+                      <Star className="h-4 w-4 fill-yellow-400 stroke-yellow-500" />
+                      <Star className="h-4 w-4 fill-yellow-400 stroke-yellow-500" />
+                      <Star className="h-4 w-4 fill-yellow-400 stroke-yellow-500" />
+                      <Star className="h-4 w-4 fill-yellow-400 stroke-yellow-500" />
+                      <Star className="h-4 w-4 fill-yellow-400 stroke-yellow-500" />
+                    </div>
                   </div>
                 </div>
 
@@ -280,12 +229,24 @@ export default function profile() {
                     alt="Avatar of Jonathan Reinink"
                   />
                   <div className="text-sm">
-                    <p className=" leading-none">Jonathan Reinink</p>
-                    <p className="text-gray-600">Aug 18</p>
+                    <p className=" leading-none mb-1">Gark Reinink</p>
+                    <div className="flex flex-row gap-1">
+                      <Star className="h-4 w-4 fill-yellow-400 stroke-yellow-500" />
+                      <Star className="h-4 w-4 fill-yellow-400 stroke-yellow-500" />
+                      <Star className="h-4 w-4 fill-yellow-400 stroke-yellow-500" />
+                      <Star className="h-4 w-4 fill-yellow-400 stroke-yellow-500" />
+                      <Star className="h-4 w-4 fill-yellow-400 stroke-yellow-500" />
+                    </div>
                   </div>
                 </div>
               </div>
             </CardContent>
+          </Card>
+        </div>
+
+        <div>
+          <Card className="shadow-lg">
+            <CardContent></CardContent>
           </Card>
         </div>
       </div>
