@@ -139,6 +139,7 @@ export default function profile() {
                       <Star className="h-4 w-4 fill-yellow-400 stroke-yellow-500" />
                       <Star className="h-4 w-4 fill-yellow-400 stroke-yellow-500" />
                       <Star className="h-4 w-4 fill-yellow-400 stroke-yellow-500" />
+                      <Star className="h-4 w-4  stroke-yellow-500" />
                     </div>
                   </div>
                 </div>
@@ -177,6 +178,8 @@ export default function profile() {
                       <Star className="h-4 w-4 fill-yellow-400 stroke-yellow-500" />
                       <Star className="h-4 w-4 fill-yellow-400 stroke-yellow-500" />
                       <Star className="h-4 w-4 fill-yellow-400 stroke-yellow-500" />
+                      <Star className="h-4 w-4  stroke-yellow-500" />
+                      <Star className="h-4 w-4  stroke-yellow-500" />
                     </div>
                   </div>
                 </div>
@@ -196,6 +199,7 @@ export default function profile() {
                       <Star className="h-4 w-4 fill-yellow-400 stroke-yellow-500" />
                       <Star className="h-4 w-4 fill-yellow-400 stroke-yellow-500" />
                       <Star className="h-4 w-4 fill-yellow-400 stroke-yellow-500" />
+                      <Star className="h-4 w-4  stroke-yellow-500" />
                     </div>
                   </div>
                 </div>
@@ -235,7 +239,7 @@ export default function profile() {
                       <Star className="h-4 w-4 fill-yellow-400 stroke-yellow-500" />
                       <Star className="h-4 w-4 fill-yellow-400 stroke-yellow-500" />
                       <Star className="h-4 w-4 fill-yellow-400 stroke-yellow-500" />
-                      <Star className="h-4 w-4 fill-yellow-400 stroke-yellow-500" />
+                      <Star className="h-4 w-4  stroke-yellow-500" />
                     </div>
                   </div>
                 </div>
