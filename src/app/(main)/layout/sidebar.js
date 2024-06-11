@@ -16,6 +16,7 @@ import {
   BarChartBig,
   Table,
   InspectionPanel,
+  Library,
 } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -84,6 +85,11 @@ const arrayCommonItem = [
       },
     ],
   },
+  {
+    item: "Form Element",
+    icon: <Library className="h-4 w-4" />,
+    link: "/form-element",
+  },
 ];
 
 const arrayAuthItem = [
@@ -117,7 +123,7 @@ export default function Sidebar() {
   return (
     <>
       <div className="flex-1">
-        <nav className="grid items-start px-2 text-sm font-medium lg:px-4">
+        <nav className="grid items-start px-2 text-sm font-medium lg:px-4 mb-2">
           {arrayCommonItem.map((item, index) => (
             <div key={index}>
               <Link
