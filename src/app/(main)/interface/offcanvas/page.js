@@ -17,13 +17,16 @@ export default function offCanvas() {
   const SHEET_SIDES = ["top", "right", "bottom", "left"];
   return (
     <>
-      <PageTitle title="Offcanvas" />
+      <PageTitle
+        title="Offcanvas"
+        description="npx shadcn-ui@latest add sheet"
+      />
 
-      <div className="grid grid-cols-2 gap-2 place-items-center">
+      <div className="grid grid-cols-4 gap-2 place-items-center">
         {SHEET_SIDES.map((side) => (
           <Sheet key={side}>
             <SheetTrigger asChild>
-              <Button variant="outline">{side}</Button>
+              <Button>{side}</Button>
             </SheetTrigger>
             <SheetContent side={side}>
               <SheetHeader>

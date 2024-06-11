@@ -15,6 +15,7 @@ import {
   AppWindowMac,
   BarChartBig,
   Table,
+  InspectionPanel,
 } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -75,6 +76,11 @@ const arrayCommonItem = [
         item: "Offcanvas",
         icon: <Table className="h-4 w-4" />,
         link: "/interface/offcanvas",
+      },
+      {
+        item: "Modals",
+        icon: <InspectionPanel className="h-4 w-4" />,
+        link: "/interface/modal",
       },
     ],
   },
