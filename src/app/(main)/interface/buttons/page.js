@@ -15,7 +15,7 @@ export default function interfaceButton() {
           <CardTitle>Standard Buttons</CardTitle>
         </CardHeader>
         <CardContent>
-          <div className="grid grid-cols-8 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4">
             <Button className="bg-[color:var(--primary-color)]">button</Button>
             <Button className="bg-[color:var(--success-color)]">button</Button>
             <Button className="bg-[color:var(--secondary-color)]">
@@ -37,7 +37,7 @@ export default function interfaceButton() {
           <CardTitle>Standard Disabled Buttons</CardTitle>
         </CardHeader>
         <CardContent>
-          <div className="grid grid-cols-8 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4">
             <Button disabled className="bg-[color:var(--primary-color)]">
               button
             </Button>
@@ -73,7 +73,7 @@ export default function interfaceButton() {
           <CardTitle>Outline Buttons</CardTitle>
         </CardHeader>
         <CardContent>
-          <div className="grid grid-cols-8 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4">
             <Button
               variant="outline"
               className="border-[color:var(--primary-color)] hover:bg-[color:var(--primary-color)] hover:text-white"
@@ -124,7 +124,7 @@ export default function interfaceButton() {
           <CardTitle>Outline Disabled Buttons</CardTitle>
         </CardHeader>
         <CardContent>
-          <div className="grid grid-cols-8 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4">
             <Button
               variant="outline"
               disabled
@@ -184,7 +184,7 @@ export default function interfaceButton() {
           <CardTitle>Ghost Buttons</CardTitle>
         </CardHeader>
         <CardContent>
-          <div className="grid grid-cols-8 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4">
             <Button className="bg-transparent text-[color:var(--primary-color)] hover:bg-[color:var(--primary-color)] hover:text-white">
               button
             </Button>
@@ -216,7 +216,7 @@ export default function interfaceButton() {
           <CardTitle>Square Buttons</CardTitle>
         </CardHeader>
         <CardContent>
-          <div className="grid grid-cols-8 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4">
             <Button className="rounded-none bg-[color:var(--primary-color)]">
               button
             </Button>
@@ -246,7 +246,7 @@ export default function interfaceButton() {
           <CardTitle>Pill Buttons</CardTitle>
         </CardHeader>
         <CardContent>
-          <div className="grid grid-cols-8 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4">
             <Button className="rounded-2xl bg-[color:var(--primary-color)]">
               button
             </Button>

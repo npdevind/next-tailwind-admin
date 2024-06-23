@@ -102,7 +102,7 @@ export default function profile() {
           </Card>
         </div>
 
-        <div className="grid grid-cols-1 gap-4 max-md:grid-cols-1">
+        <div className="gap-2">
           <Card className="shadow-lg">
             <CardHeader>
               <CardTitle className="text-lg">Social</CardTitle>
@@ -248,11 +248,161 @@ export default function profile() {
           </Card>
         </div>
 
-        <div>
-          <Card className="shadow-lg">
-            <CardContent></CardContent>
-          </Card>
-        </div>
+        {/* 
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-1">
+          <div className="flex gap-2">
+            <div>
+              <Card className="shadow-lg">
+                <CardHeader>
+                  <CardTitle className="text-lg">Social</CardTitle>
+                  <div className="border-t"></div>
+                </CardHeader>
+                <CardContent className="grid grid-cols-5 place-items-stretch">
+                  <IoLogoGithub className="h-10 w-10" />
+                  <FaLinkedin className="h-10 w-10 fill-blue-600" />
+                  <FaFacebook className="h-10 w-10 fill-blue-600" />
+                  <FaInstagram className="h-10 w-10 fill-red-600" />
+                  <FaSquareXTwitter className="h-10 w-10 " />
+                </CardContent>
+              </Card>
+              <Card className="shadow-lg">
+                <CardHeader>
+                  <CardTitle className="text-lg">Reviews</CardTitle>
+                  <div className="border-t"></div>
+                </CardHeader>
+                <CardContent>
+                  <div className="grid gap-4 grid-cols-1">
+                    <div className="flex items-center">
+                      <Image
+                        className="w-10 h-10 rounded-full mr-4"
+                        src="https://avatar.iran.liara.run/public/7"
+                        width="100"
+                        height="100"
+                        alt="Avatar of Jonathan Reinink"
+                      />
+                      <div className="text-sm">
+                        <p className="leading-none mb-1">Jonathan Reinink</p>
+                        <div className="flex flex-row gap-1">
+                          <Star className="h-4 w-4 fill-yellow-400 stroke-yellow-500" />
+                          <Star className="h-4 w-4 fill-yellow-400 stroke-yellow-500" />
+                          <Star className="h-4 w-4 fill-yellow-400 stroke-yellow-500" />
+                          <Star className="h-4 w-4 fill-yellow-400 stroke-yellow-500" />
+                          <Star className="h-4 w-4  stroke-yellow-500" />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="flex items-center">
+                      <Image
+                        className="w-10 h-10 rounded-full mr-4"
+                        src="https://avatar.iran.liara.run/public/9"
+                        width="100"
+                        height="100"
+                        alt="Avatar of Jonathan Reinink"
+                      />
+                      <div className="text-sm">
+                        <p className="leading-none mb-1">Sonak Sunil</p>
+                        <div className="flex flex-row gap-1">
+                          <Star className="h-4 w-4 fill-yellow-400 stroke-yellow-500" />
+                          <Star className="h-4 w-4 fill-yellow-400 stroke-yellow-500" />
+                          <Star className="h-4 w-4 fill-yellow-400 stroke-yellow-500" />
+                          <Star className="h-4 w-4 fill-yellow-400 stroke-yellow-500" />
+                          <Star className="h-4 w-4 fill-yellow-400 stroke-yellow-500" />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="flex items-center">
+                      <Image
+                        className="w-10 h-10 rounded-full mr-4"
+                        src="https://avatar.iran.liara.run/public/93"
+                        width="100"
+                        height="100"
+                        alt="Avatar of Jonathan Reinink"
+                      />
+                      <div className="text-sm">
+                        <p className=" leading-none mb-1">Dr. PC Sean</p>
+                        <div className="flex flex-row gap-1">
+                          <Star className="h-4 w-4 fill-yellow-400 stroke-yellow-500" />
+                          <Star className="h-4 w-4 fill-yellow-400 stroke-yellow-500" />
+                          <Star className="h-4 w-4 fill-yellow-400 stroke-yellow-500" />
+                          <Star className="h-4 w-4  stroke-yellow-500" />
+                          <Star className="h-4 w-4  stroke-yellow-500" />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="flex items-center">
+                      <Image
+                        className="w-10 h-10 rounded-full mr-4"
+                        src="https://avatar.iran.liara.run/public/15"
+                        width="100"
+                        height="100"
+                        alt="Avatar of Jonathan Reinink"
+                      />
+                      <div className="text-sm">
+                        <p className=" leading-none mb-1">Jonh June</p>
+                        <div className="flex flex-row gap-1">
+                          <Star className="h-4 w-4 fill-yellow-400 stroke-yellow-500" />
+                          <Star className="h-4 w-4 fill-yellow-400 stroke-yellow-500" />
+                          <Star className="h-4 w-4 fill-yellow-400 stroke-yellow-500" />
+                          <Star className="h-4 w-4 fill-yellow-400 stroke-yellow-500" />
+                          <Star className="h-4 w-4  stroke-yellow-500" />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="flex items-center">
+                      <Image
+                        className="w-10 h-10 rounded-full mr-4"
+                        src="https://avatar.iran.liara.run/public/45"
+                        width="100"
+                        height="100"
+                        alt="Avatar of Jonathan Reinink"
+                      />
+                      <div className="text-sm">
+                        <p className=" leading-none mb-1">Kanbiro Jhon</p>
+                        <div className="flex flex-row gap-1">
+                          <Star className="h-4 w-4 fill-yellow-400 stroke-yellow-500" />
+                          <Star className="h-4 w-4 fill-yellow-400 stroke-yellow-500" />
+                          <Star className="h-4 w-4 fill-yellow-400 stroke-yellow-500" />
+                          <Star className="h-4 w-4 fill-yellow-400 stroke-yellow-500" />
+                          <Star className="h-4 w-4 fill-yellow-400 stroke-yellow-500" />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="flex items-center">
+                      <Image
+                        className="w-10 h-10 rounded-full mr-4"
+                        src="https://avatar.iran.liara.run/public/70"
+                        width="100"
+                        height="100"
+                        alt="Avatar of Jonathan Reinink"
+                      />
+                      <div className="text-sm">
+                        <p className=" leading-none mb-1">Gark Reinink</p>
+                        <div className="flex flex-row gap-1">
+                          <Star className="h-4 w-4 fill-yellow-400 stroke-yellow-500" />
+                          <Star className="h-4 w-4 fill-yellow-400 stroke-yellow-500" />
+                          <Star className="h-4 w-4 fill-yellow-400 stroke-yellow-500" />
+                          <Star className="h-4 w-4 fill-yellow-400 stroke-yellow-500" />
+                          <Star className="h-4 w-4  stroke-yellow-500" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+
+            <div>
+              <Card className="shadow-lg">
+                <CardContent></CardContent>
+              </Card>
+            </div>
+          </div>
+        </div> */}
       </div>
     </>
   );

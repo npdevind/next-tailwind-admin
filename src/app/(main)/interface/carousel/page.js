@@ -48,7 +48,7 @@ export default function CarouselPage() {
         description="npx shadcn-ui@latest add carousel"
       />
 
-      <div className="grid grid-cols-2 gap-4 place-items-center h-56">
+      <div className="grid grid-cols-1 gap-4 place-items-center h-56">
         <Carousel className="w-full max-w-lg">
           <Card>
             <CardHeader>
