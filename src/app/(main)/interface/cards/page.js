@@ -16,10 +16,10 @@ export default function interfaceCard() {
     <>
       <PageTitle title="Cards" description="npx shadcn-ui@latest add card" />
 
-      <div className="grid grid-cols-4 gap-4">
-        <p className="col-start-1 col-span-4 text-lg flex gap-1 font-semibold">
-          <CircleChevronRight className="h-7 w-5" /> Basic card with basic color
-        </p>
+      <p className="col-start-1 col-span-4 text-lg flex gap-1 font-semibold mb-4">
+        <CircleChevronRight className="h-7 w-5" /> Basic card with basic color
+      </p>
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4">
         <div>
           <Card>
             <CardHeader>
@@ -141,11 +141,10 @@ export default function interfaceCard() {
         </div>
       </div>
 
-      <div className="grid grid-cols-4 gap-4">
-        <p className="col-start-1 col-span-4 text-lg flex gap-1 font-semibold">
-          <CircleChevronRight className="h-7 w-5" /> Custom Cards
-        </p>
-
+      <p className="col-start-1 col-span-4 text-lg flex gap-1 font-semibold mb-4">
+        <CircleChevronRight className="h-7 w-5" /> Custom Cards
+      </p>
+      <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
         <div>
           <Card className="bg-[url('../assets/card_bg_one.svg')] bg-no-repeat bg-[length:75px_100px] bg-right-bottom">
             <CardHeader>
@@ -179,15 +178,13 @@ export default function interfaceCard() {
         </div>
       </div>
 
-      <div className="grid grid-cols-2 gap-3">
-        <p className="col-start-1 col-span-4 text-lg flex gap-1 font-semibold">
-          <CircleChevronRight className="h-7 w-5" /> Custom Cards With Image
-        </p>
-
-        <Card className="max-w-sm w-full lg:max-w-full lg:flex shadows-lg">
+      <p className="col-start-1 col-span-4 text-lg flex gap-1 font-semibold mb-4">
+        <CircleChevronRight className="h-7 w-5" /> Custom Cards With Image
+      </p>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 mb-4">
+        <Card className="flex max-w-full w-full lg:max-w-full lg:flex md:max-w-full md:flex shadows-lg">
           <Image
-            className="h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-l-lg   text-center overflow-hidden"
-            title="Woman holding a mug"
+            className="h-auto w-48 lg:h-auto lg:w-48 md:h-auto md:w-48 flex-none bg-cover rounded-l-lg text-center overflow-hidden"
             src={cardTop}
             alt=""
           />
@@ -216,7 +213,7 @@ export default function interfaceCard() {
           </div>
         </Card>
 
-        <Card className="max-w-sm w-full lg:max-w-full lg:flex shadows-lg">
+        <Card className="flex max-w-full lg:max-w-full lg:flex md:max-w-full md:flex shadows-lg">
           <div className="flex flex-col justify-between leading-normal">
             <CardHeader>
               <CardTitle>Card with right side image</CardTitle>
@@ -241,15 +238,14 @@ export default function interfaceCard() {
             </CardFooter>
           </div>
           <Image
-            className="h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-r-lg   text-center overflow-hidden"
-            title="Woman holding a mug"
+            className="h-auto w-48 lg:h-auto lg:w-48 md:h-auto md:w-48 flex-none bg-cover rounded-r-lg   text-center overflow-hidden"
             src={cardTop}
             alt=""
           />
         </Card>
       </div>
 
-      <div className="grid grid-cols-2 gap-3">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
         <Card className="rounded-b-lg">
           <Image
             className="w-full rounded-t-lg"
@@ -309,11 +305,10 @@ export default function interfaceCard() {
         </Card>
       </div>
 
-      <div className="grid grid-cols-4 gap-3">
-        <p className="col-start-1 col-span-4 text-lg flex gap-1 font-semibold">
-          <CircleChevronRight className="h-7 w-5" /> Custom Cards With ribbon
-        </p>
-
+      <p className="col-start-1 col-span-4 text-lg flex gap-1 font-semibold mb-4">
+        <CircleChevronRight className="h-7 w-5" /> Custom Cards With ribbon
+      </p>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3">
         <div className="relative overflow-hidden">
           <Card className="shadow-lg">
             <div className="absolute transform origin-center rotate-45 bg-green-600 text-center text-xs font-semibold p-1 text-white right-[-60px] top-[12px]  w-[170px]">
